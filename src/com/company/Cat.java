@@ -6,15 +6,16 @@ public class Cat extends Animals {
     public Cat(String name) {
         super(name);
         counter++;
+
     }
 
     @Override
     public void run(int distance) {
-        if (distance <= 200) {
-            super.run(distance);
+        if (distance >= 0 && distance <= 200) {
+            System.out.printf("%s ran %dm\n", getName(), distance);
             return;
         }
-        System.out.println("Too long distance");
+        System.out.println("Unreachable distance. Change parameter!");
     }
 
     @Override
