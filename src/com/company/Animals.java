@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animals {
+public abstract class Animals {
     private static int counter;
     private String name;
 
@@ -9,13 +9,13 @@ public class Animals {
         counter++;
     }
 
-    public void run(int distance) {
-        System.out.printf("%s ran %dm\n", name, distance);
+    public String getName() {
+        return name;
     }
 
-    public void swim(int distance) {
-        System.out.printf("%s swam %dm\n", name, distance);
-    }
+    public abstract void run(int distance);
+
+    public abstract void swim(int distance);
 
     public static void getInstancesNumber() {
         System.out.println("Animals was invoked " + counter + " times.");

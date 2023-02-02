@@ -10,20 +10,20 @@ public class Dog extends Animals {
 
     @Override
     public void run(int distance) {
-        if (distance <= 500) {
-            super.run(distance);
+        if (distance >= 0 && distance <= 500) {
+            System.out.printf("%s ran %dm\n", getName(), distance);
             return;
         }
-        System.out.println("Too long distance");
+        System.out.println("Unreachable distance. Change parameter!");
     }
 
     @Override
     public void swim(int distance) {
-        if (distance <= 10) {
-            super.swim(distance);
+        if (distance >= 0 && distance <= 10) {
+            System.out.printf("%s swam %dm\n", getName(), distance);
             return;
         }
-        System.out.println("Too long distance");
+        System.out.println("Unreachable distance. Change parameter!");
     }
 
     public static void getInstancesNumber() {
